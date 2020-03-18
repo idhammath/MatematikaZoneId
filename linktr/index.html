@@ -12,14 +12,48 @@
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.6/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.6/dist/js/uikit-icons.min.js"></script>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161126404-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-161126404-1');
+</script>
 </head>
 <body>
 <h1 class="uk-heading-line uk-text-center"><span>Matematika Zone Id</span></h1>
-<input class="uk-input" id="form-horizontal-text" type="text" placeholder="Masukkan kodenya di sini...."><a class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" href="">GO</a>
-<br>
-<a class="uk-button uk-button-primary" href="">Lihat Blog Matematika Zone Id</a>
+<input class="uk-input" id="form-horizontal-text" type="text" placeholder="Masukkan kodenya di sini...."><button class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom uk-text-bold" id="tombol">CARI PEMBAHASAN</button>
+<br><a class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom uk-text-bold" href="https://www.matematikazone.id">BLOG</a>
+  <br><a class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom uk-text-bold" href="https://web.facebook.com/groups/matematikazoneid">GRUP FACEBOOK</a>
+  <br><a class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom uk-text-bold" href="https://t.me/matematikazoneidgrup">GRUP TELEGRAM</a>
+  <br><a class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom uk-text-bold" href="https://chat.whatsapp.com/HIUpnicy1VA0lrtkiARqRd">GRUP WHATSAPP</a>
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  
+<div id="modalku" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <h2 class="uk-modal-title">KODE SALAH ATAU TIDAK DITEMUKAN</h2>
+        <p>Silahkan masukkan kode kembali dengan benar. Jika kode yang diberikan tetap tidak bisa, silahkan hubungi admin IG @matematikazoneid. Terima kasih.</p>
+    </div>
+</div>
+  
+<script>
+var kode=["TER081019","BAG091019"];
+var link=["https://matematikazone.id/2017/05/teorema-sisa-soal-dan-pembahasan.html#7","/2018/09/barisan-dan-deret-geometri-soal-dan.html#6"];
+
+$(document).ready(function(){$( "#tombol").click(function() {
+  var kod=$("#isikode").val();
+  var indkod=kode.indexOf(kod);
+  if(indkod==-1){
+UIkit.modal('#modalku').show();
+  }
+  else{window.location = link[indkod];};
+});
+});
+</script>
 
   </body>
 </html>
